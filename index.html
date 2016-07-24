@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>多火招新页面</title>
+
+<link href="css&img/style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div id="logo"></div>
+<div id="hum"></div>
+<nav id="side">
+	<a class="one" class="on"></a>
+	<a class="side">关于多火</a>
+	<a class="side">团队简介</a>
+	<a class="side">产品介绍</a>
+	<a class="side">加入我们</a>
+</nav>
+<section class="section-wrap">
+	<div class="section section-1">
+		<div class="bgimg"></div>
+		<div class="text active">
+			<p class="title">
+				多火工作室招新啦<br>
+				Welcome to DuoHuo Studio
+			</p>
+		</div>
+		<div class="arrow"></div>
+	</div>
+	<div class="section section-2">
+		<div class="bgimg"></div>
+		<div class="text">
+			<p class="title" id="page1">2009年，多火工作室成立，我们怀揣梦想走过七个年头，我<br>
+										们专注互联网，青春不息，折腾不止。多火现有设计，前端，<br>
+										安全，Android，Java，PHP六小组，小组成员来自计软，传媒，<br>
+										电信等多个院系，多火的每一个产品都是各小组成员共同努力<br>
+										的成果。<br>
+										硬件设施：办公室，百兆宽带，空调，冰箱，小图书馆<br>
+										<br>
+										在多火，你可以与一群志趣相投的人一起学习交流<br>
+										在多火，你所做的并不是分配给你的任务而是自己根据兴趣选<br>
+										择的项目<br>
+										在多火，你的每一个实用可行的idea都有可能成为产品</p>
+		</div>
+	</div>
+	<div class="section section-3">
+		<div class="bgimg"></div>
+		<div class="text">
+			<div class="title">tuanduijianjie
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+	<div class="section section-4">
+		<div class="bgimg"></div>
+		<div class="text">
+			<p class="title">产品介绍</p>
+		</div>
+	</div>
+	<div class="section section-5">
+		<div class="bgimg"></div>
+		<div class="text">
+			<p class="title">加入我们</p>
+		</div>
+	</div>
+</section>
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a:a(jQuery)}(function(a){function b(b){var g=b||window.event,h=i.call(arguments,1),j=0,l=0,m=0,n=0,o=0,p=0;if(b=a.event.fix(g),b.type="mousewheel","detail"in g&&(m=-1*g.detail),"wheelDelta"in g&&(m=g.wheelDelta),"wheelDeltaY"in g&&(m=g.wheelDeltaY),"wheelDeltaX"in g&&(l=-1*g.wheelDeltaX),"axis"in g&&g.axis===g.HORIZONTAL_AXIS&&(l=-1*m,m=0),j=0===m?l:m,"deltaY"in g&&(m=-1*g.deltaY,j=m),"deltaX"in g&&(l=g.deltaX,0===m&&(j=-1*l)),0!==m||0!==l){if(1===g.deltaMode){var q=a.data(this,"mousewheel-line-height");j*=q,m*=q,l*=q}else if(2===g.deltaMode){var r=a.data(this,"mousewheel-page-height");j*=r,m*=r,l*=r}if(n=Math.max(Math.abs(m),Math.abs(l)),(!f||f>n)&&(f=n,d(g,n)&&(f/=40)),d(g,n)&&(j/=40,l/=40,m/=40),j=Math[j>=1?"floor":"ceil"](j/f),l=Math[l>=1?"floor":"ceil"](l/f),m=Math[m>=1?"floor":"ceil"](m/f),k.settings.normalizeOffset&&this.getBoundingClientRect){var s=this.getBoundingClientRect();o=b.clientX-s.left,p=b.clientY-s.top}return b.deltaX=l,b.deltaY=m,b.deltaFactor=f,b.offsetX=o,b.offsetY=p,b.deltaMode=0,h.unshift(b,j,l,m),e&&clearTimeout(e),e=setTimeout(c,200),(a.event.dispatch||a.event.handle).apply(this,h)}}function c(){f=null}function d(a,b){return k.settings.adjustOldDeltas&&"mousewheel"===a.type&&b%120===0}var e,f,g=["wheel","mousewheel","DOMMouseScroll","MozMousePixelScroll"],h="onwheel"in document||document.documentMode>=9?["wheel"]:["mousewheel","DomMouseScroll","MozMousePixelScroll"],i=Array.prototype.slice;if(a.event.fixHooks)for(var j=g.length;j;)a.event.fixHooks[g[--j]]=a.event.mouseHooks;var k=a.event.special.mousewheel={version:"3.1.12",setup:function(){if(this.addEventListener)for(var c=h.length;c;)this.addEventListener(h[--c],b,!1);else this.onmousewheel=b;a.data(this,"mousewheel-line-height",k.getLineHeight(this)),a.data(this,"mousewheel-page-height",k.getPageHeight(this))},teardown:function(){if(this.removeEventListener)for(var c=h.length;c;)this.removeEventListener(h[--c],b,!1);else this.onmousewheel=null;a.removeData(this,"mousewheel-line-height"),a.removeData(this,"mousewheel-page-height")},getLineHeight:function(b){var c=a(b),d=c["offsetParent"in a.fn?"offsetParent":"parent"]();return d.length||(d=a("body")),parseInt(d.css("fontSize"),10)||parseInt(c.css("fontSize"),10)||16},getPageHeight:function(b){return a(b).height()},settings:{adjustOldDeltas:!0,normalizeOffset:!0}};a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})});
+	$(function(){
+		var i=0;
+		var $btn = $('#side a'),
+			$wrap = $('.section-wrap'),
+			$arrow = $('.arrow');
+		function up(){i++;if(i==$btn.length){i=0};}
+		function down(){i--;if(i<0){i=$btn.length-1};}
+		function run(){
+			$btn.eq(i).addClass('on').siblings().removeClass('on');	
+			$wrap.attr("class","section-wrap").addClass(function() { return "put-section-"+i; }).find('.section').eq(i).find('.text').addClass('active');
+		};
+		$btn.each(function(index) {
+			$(this).click(function(){
+				i=index;
+				run();
+			})
+		});
+		$arrow.one('click',go);
+		function go(){
+			up();run();	
+			setTimeout(function(){$arrow.one('click',go)},1000)
+		};
+		$wrap.one('mousewheel',mouse_);
+		function mouse_(event){
+			if(event.deltaY<0) {up()}
+			else{down()}
+			run();
+			setTimeout(function(){$wrap.one('mousewheel',mouse_)},1000)
+		};
+	});
+	var hum=document.getElementById("hum"),
+	    side=document.getElementById("side"),
+	    logo=document.getElementById("logo"),
+	    bgimg=document.getElementsByClassName("bgimg");
+	hum.onclick=function(){
+		side.style.right=0;
+		logo.style.display = "none";
+		hum.style.display = "none";
+	}
+	bgimg.onclick=function(){
+		side.style.right=-200+'px';
+		logo.style.display = "block";
+		hum.style.display = "block";
+	}
+</script>
+</body>
+</html>
