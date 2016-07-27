@@ -22,9 +22,11 @@
 	<div class="section section-1">
 		<div class="bgimg"></div>
 		<div class="text active">
-			<p class="title" id="tit1">
-				多火工作室招新啦<br>
+			<p class="title">
+				<div id="tit1">多火工作室招新啦<br>
 				Welcome to DuoHuo Studio
+				</div>
+				<div id="tit2">SLOGAN<br>NOW OR NEVER</div>	
 			</p>
 		</div>
 		<div id="down">
@@ -52,14 +54,15 @@
 	<div class="section section-3">
 		<div class="bgimg"></div>
 		<div class="text">
-			<div class="title">tuanduijianjie
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
+				<nav id="fenzu">
+					<a id="f1" class="fen">JAVA组</a>
+					<a id="f2" class="fen">安全组</a>
+					<a id="f3" class="fen">PHP组</a>
+					<a id="f4" class="fen">设计组</a>
+					<a id="f5" class="fen">前端组</a>
+					<a id="f6" class="fen">安卓组</a>
+				</nav>
+				<p></p>
 		</div>
 	</div>
 	<div class="section section-4">
@@ -130,16 +133,13 @@
 
 
 
-	var blink=document.getElementsByClassName("blink"); setInterval("ab()",1500);
-
-		
-
-		
-		function ab(){
-			if(blink[0].style.opacity==0){
-			 setTimeout(function(){blink[0].style.opacity=1;},0);
-		 	setTimeout(function(){blink[1].style.opacity=1;},1000);
-			 setTimeout(function(){blink[2].style.opacity=1;},2000);
+	var blink=document.getElementsByClassName("blink"); 
+	setInterval("ab()",1500);	
+	function ab(){
+		if(blink[0].style.opacity==0){
+			setTimeout(function(){blink[0].style.opacity=1;},0);
+	 		setTimeout(function(){blink[1].style.opacity=1;},1000);
+			setTimeout(function(){blink[2].style.opacity=1;},2000);
 		}
 		setTimeout(function(){
 				if(blink[2].style.opacity==1){
@@ -148,8 +148,36 @@
 				setTimeout(function(){blink[0].style.opacity=0;},2000);
 			};
 		},3000);
-		}
+	}                               /*首页箭头闪烁*/
 
+
+	var tit1=document.getElementById("tit1"),
+		tit2=document.getElementById("tit2");
+	tit12();
+	setInterval("tit12()",4000);
+	function tit12(){
+		setTimeout(function(){tit1.style.opacity="1";},0);
+		setTimeout(function(){tit1.style.opacity="0";},1000);
+		setTimeout(function(){tit2.style.opacity="1";},2000);
+		setTimeout(function(){tit2.style.opacity="0";},3000);
+	}
+
+
+
+
+
+	var fenzu=document.getElementsByClassName("fen");
+	fz();
+	setInterval("fz()",6000);
+	function fz(){
+			setTimeout(function(){fenzu[0].style.border="red 1px solid";fenzu[5].style.border="1px";},1000);
+			setTimeout(function(){fenzu[1].style.border="red 1px solid";fenzu[0].style.border="1px";},2000);
+			setTimeout(function(){fenzu[2].style.border="red 1px solid";fenzu[1].style.border="1px";},3000);
+			setTimeout(function(){fenzu[3].style.border="red 1px solid";fenzu[2].style.border="1px";},4000);
+			setTimeout(function(){fenzu[4].style.border="red 1px solid";fenzu[3].style.border="1px";},5000);
+			setTimeout(function(){fenzu[5].style.border="red 1px solid";fenzu[4].style.border="1px";},6000);
+			  //不知道为什么，用for循环之后最后一句起作用
+	}
 
 
 
