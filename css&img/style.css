@@ -46,3 +46,6 @@ nav a{display: block;}
 .cp img{width: 80%;height: 70%;}
 .cp>p{width: 80%;height: 20%;margin: 0 auto; font-size: 30px;color: #fff;border-bottom: 2px solid rgb(48,48,48);}
 #allcp{width: 66%;height: 60%;position: absolute;top: 20%;left: 17%;z-index: 2;}
+
+
+#join{background-image:url(join.png);background-size:100% 100%;}
